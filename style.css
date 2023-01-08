@@ -57,6 +57,7 @@ h2,h3,h4,h5
 {
 	background:linear-gradient(#1b2f458c,#1b2f458c),url("assets/image/hero-bg.jpg");
 	background-size:cover;
+	background-position: center;
 }
 .home-para 
 {
@@ -98,6 +99,7 @@ h2,h3,h4,h5
 {
 	background-image:url("assets/image/about-bg.jpg");
 	background-size:cover;
+	background-position:center;
 }
 .about-title
 {
