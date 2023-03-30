@@ -12,19 +12,20 @@
 			<header class="head-section">
 				<div class="head-container">
 					<h1>Nova</h1>
-						<nav id="nav">
+						<nav id="nav" class="nav">
 							<ul>
-								<li><a href="#home" style="color:white;">Home</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#service">Service</a></li>
-								<li><a href="#port">Portfolio</a></li>
-								<li><a href="#team">Team</a></li>
-								<li><a href="#blog">Blog</a></li>
+								<li><a href="#home" onclick="navigationBar2()" style="color:white;">Home</a></li>
+								<li><a href="#about" onclick="navigationBar2()">About</a></li>
+								<li><a href="#service" onclick="navigationBar2()">Service</a></li>
+								<li><a href="#" onclick="navigationBar2()">Portfolio</a></li>
+								<li><a href="#" onclick="navigationBar2()">Team</a></li>
+								<li><a href="#blog" onclick="navigationBar2()">Blog</a></li>
 								<li><a href="">Dropdown</a></li>
-								<li><a href="#address">Cantact</a></li>
+								<li><a href="#address" onclick="navigationBar2()">Contact</a></li>
+								<li class="wrong-btn" onclick="navigationBar2()" id="wrongBtn"><i class="bi bi-x"></i></li>
 							</ul>
 						</nav>
-					<div class="head-icon">
+					<div class="head-icon" id="listBar" onclick="navigationBar()">
 						<i class="bi bi-list"></i>
 					</div>
 				</div>
@@ -165,12 +166,14 @@
 					</div>
 				</div>
 			</section>
-			<section class="action-section" id="port">
-				<div class="action-container">
-					<div class="action-para">
-						<h3>Ut fugiat aliquam aut non</h3>
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-						<a href="#" class="act-btn">Call To Action</a>
+			<section id="port">
+				<div class="action-section">
+					<div class="action-container">
+						<div class="action-para">
+							<h3>Ut fugiat aliquam aut non</h3>
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+							<a href="#" class="act-btn">Call To Action</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -345,5 +348,21 @@
 			</footer>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script>
+			var navbarList=document.getElementById('listBar');
+			var navbar=document.getElementById('nav');
+			var worngBtns=document.getElementById('wrongBtn');
+			function navigationBar(){
+				if(!navbar.classList.contains('navigationBAr'))
+				{
+					navbar.classList.add('navigationBAr');
+					navbar.classList.remove('nav');
+				}
+			}
+			function navigationBar2(){
+				navbar.classList.remove('navigationBAr');
+				navbar.classList.add('nav');
+			}
+		</script>
 	</body>
 </html>
